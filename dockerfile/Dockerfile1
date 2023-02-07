@@ -1,0 +1,7 @@
+FROM redhat/ubi8
+RUN yum update -y && yum install java -y
+WORKDIR /app
+COPY . .
+RUN yum install docker -y
+CMD echo "hello everyone"
+
